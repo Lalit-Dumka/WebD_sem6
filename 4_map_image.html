@@ -1,0 +1,25 @@
+<!-- Create a web page with the following using HTML:
+To embed a indian map image in the web page
+To fix the hot spots
+Show all the related information when the hot spots are clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India</title>
+
+</head>
+<body>
+    <div id="map-container">
+        <img src="map/indian_map.png" alt="Indian Map" usemap="#indiaMap">
+        <map name="indiaMap">
+            <area shape="poly" coords="166,389, 238,341, 339,397, 393,380, 433,391, 393,469, 408,520, 478,603, 456,673, 550, 707, 153,710, 243,524, 204,500, 204, 433, 219,421" alt="North Region" href="map/poly.html">
+            <area shape="circle" coords="443,926,188" alt="West Region" href="map/circle.html">
+            <area shape="rect" coords="295,1232, 492,1350" alt="South Region" href="map/rect.html">
+        </map>
+    </div>
+    
+</body>
+</html>

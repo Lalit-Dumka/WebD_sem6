@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev</title>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form action="" id="cardDetailsForm">
+        <hr>
+        <label for="mcPrefix">MasterCard Prefix: </label>
+        <input type="number" name="mcPrefix" id="mcPrefix">
+        <label for="mcLength">MasterCard Length: </label>
+        <input type="number" name="mcLength" id="mcLength">
+        <hr>
+        <label for="vPrefix">Visa Prefix: </label>
+        <input type="number" name="vPrefix" id="vPrefix">
+        <label for="vLength">Visa Length: </label>
+        <input type="number" name="vLength" id="vLength">
+        <hr>
+        <label for="aePrefix">American Express Prefix: </label>
+        <input type="number" name="aePrefix" id="aePrefix">
+        <label for="aeLength">American Express Length: </label>
+        <input type="number" name="aeLength" id="aeLength">
+        <hr>
+        <button type="submit">Submit </button>
+    </form>
+
+    <h1>Form Validation 2</h1>
+    <form action="" id="cardDetailsForm2">
+        <hr>
+        <label for="cardNumber">Enter Card Number: </label>
+        <input type="number" name="cardNumber" id="cardNumber">
+        <hr>
+        
+        <button type="submit">Submit </button>
+    </form>
+
+
+    <script>
+        const myForm = document.querySelector('#cardDetailsForm');
+        
+        myForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            const mcPrefix = document.querySelector('#mcPrefix').value;
+            const mcLength = document.querySelector('#mcLength').value;
+            const vPrefix = document.querySelector('#vPrefix').value;
+            const vLength = document.querySelector('#vLength').value;
+            const aePrefix = document.querySelector('#aePrefix').value;
+            const aeLength = document.querySelector('#aeLength').value;
+
+            if((mcLength != 16 || (vLength != 16 && vLength !=13) || aeLength != 15) || ((mcPrefix<51 && mcPrefix>55) || vPrefix != 4 || (aePrefix < 34
+                && aePrefix > 37))){
+                alert('Please enter a valid length');
+            }
+
+            else{
+                alert('Thank you for your submission');
+            }
+
+            
+
+            
+        })
+    
+
+        const myForm2 = document.querySelector('#cardDetailsForm2');
+        
+        myForm2.addEventListener('submit', function(e){
+            e.preventDefault();
+            const cardNumber = document.querySelector('#cardNumber').value;
+            const cardNumberString = cardNumber.toString();
+            const cardNumberLength = cardNumberString.length;
+            const cardNumberPrefix = cardNumberString.slice(0,2);
+            if(cardNumberLength != 16  || (cardNumberPrefix >55 && cardNumberPrefix <51)){
+                alert('Please enter a valid card number');
+            }
+
+            else{
+                alert('Thank you for your submission');
+            }
+
+            
+
+            
+        })
+    
+    
+    
+    </script>
+</body>
+</html>

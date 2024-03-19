@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames</title>
+</head>
+    <frameset rows = "10%,80%,10%">
+        <frame src="frames/frame_1.html">
+        <frameset cols="30%,50%,20%">
+            <frame src="frames/frame_2.html">
+            <frame src="frames/frame_3.html" name="mid_col">
+            <frame src="frames/img.html">
+        </frameset>
+        <frame src="frames/frame_4.html">
+        <noframes>
+            <body>Your browser does not support frames.</body>
+        </noframes>
+    </frameset>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="">
+        <div id="basic-info">
+            <h4>Basic information</h4>
+            <label for="fname">Full Name: </label>
+            <input type="text" name="fname" id="fname">
+            <br>
+            <label for="bdate">Birth Date: </label>
+            <input type="text" name="bdate" id="bdate">
+            <br>
+            Gender:
+            <label for="gmale">Male</label>
+            <input type="radio" name="gender" id="gmale" value="male">
+            <label for="gfemale">Female</label>
+            <input type="radio" name="gender" id="gfemale" value="female">
+            <br>
+            <label for="address">Address: </label>
+            <textarea name="address" id="address" rows="3" cols="30"></textarea>
+            <br>
+            <label for="pno">Phone Number:</label>
+            <input type="number" name="pno" id="pno">
+        </div>
+        <div id="Extra-info">
+            <h4>Extra information</h4>
+            Interests:
+            <input type="checkbox" id="Books" name="Books" value="Bike">
+            <label for="Books">Books</label>
+            <input type="checkbox" id="Movies" name="Movies" value="Car">
+            <label for="Movies">Movies</label>
+            <input type="checkbox" id="Games" name="Games" value="Boat">
+            <label for="Games">VideoGames</label>
+            <br>
+            <label for="favcolor">Favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff00ff">
+        </div>
+
+        <br>
+        <br>
+        <input type="reset" value="Reset"
+        style="background-color: red; color: white" />
+ <input type="submit" value="Submit"
+        style="background-color: green; color: white" />
+
+
+    </form>
+</body>
+
+</html>
