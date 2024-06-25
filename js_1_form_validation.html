@@ -28,7 +28,7 @@
     </form>
 
     <h1>Form Validation 2</h1>
-    <form action="" id="cardDetailsForm2">
+    <form id="cardDetailsForm2">
         <hr>
         <label for="cardNumber">Enter Card Number: </label>
         <input type="number" name="cardNumber" id="cardNumber">
@@ -64,7 +64,6 @@
             
         })
     
-
         const myForm2 = document.querySelector('#cardDetailsForm2');
         
         myForm2.addEventListener('submit', function(e){
@@ -73,17 +72,14 @@
             const cardNumberString = cardNumber.toString();
             const cardNumberLength = cardNumberString.length;
             const cardNumberPrefix = cardNumberString.slice(0,2);
-            if(cardNumberLength != 16  || (cardNumberPrefix >55 && cardNumberPrefix <51)){
+            console.log(cardNumberPrefix);
+            if(cardNumberLength != 16  || (cardNumberPrefix >55 || cardNumberPrefix <51)){
                 alert('Please enter a valid card number');
             }
 
             else{
                 alert('Thank you for your submission');
-            }
-
-            
-
-            
+            }  
         })
     
     

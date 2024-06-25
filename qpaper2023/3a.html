@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Age</title>
+</head>
+<body>
+    <form action="" id="voterForm">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required><br><br>
+        <label for="age">Age: </label>
+        <input type="number" name="age" id="age" required><br><br>
+        <label for="nationality">Nationality: </label>
+        <input type="radio" name="nationality" id="Indian" value="Indian">
+        <label for="Indian">Indian</label>
+        <input type="radio" name="nationality" id="Others" value="Others">
+        <label for="Others">Others</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const form = document.getElementById('voterForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const nationality = document.querySelector('input[name = "nationality"]:checked').value;
+
+            if(age>=18 && nationality==="Indian"){
+                alert(`Hello ${name}, You are eligible to vote.`);
+            } else {
+                alert(`Hello ${name}, You are not eligible to vote.`);
+            }
+            
+        });
+
+    </script>
+</body>
+</html>

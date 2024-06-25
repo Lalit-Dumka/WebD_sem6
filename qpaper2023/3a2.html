@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Paragraph Content</title>
+</head>
+<body>
+    <p id="dummyText">This is some dummy text.</p>
+    <button id="changeTextBtn">Change Text</button>
+
+    <script>
+        document.getElementById('changeTextBtn').addEventListener('click', function() {
+            // Method 1: Using innerHTML
+            document.getElementById('dummyText').innerHTML = "This is the new content set by innerHTML.";
+
+            // Method 2: Using textContent
+            // uncomment the next line 
+            // document.getElementById('dummyText').textContent = "This is the new content set by textContent.";
+        });
+    </script>
+</body>
+</html>
